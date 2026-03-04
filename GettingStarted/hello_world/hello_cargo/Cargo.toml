@@ -1,0 +1,15 @@
+# package indicates the following statements are configuring a package.
+[package]
+
+# indicates what cargo need to compile the program.
+name = "hello_cargo"
+version = "0.1.0"
+edition = "2024"
+
+# list all the project dependencies.
+[dependencies]
+
+# in Rust packages of code are referred to as crates.
+
+# TOML refers to Tom's Obvious, Minimal Language
+
