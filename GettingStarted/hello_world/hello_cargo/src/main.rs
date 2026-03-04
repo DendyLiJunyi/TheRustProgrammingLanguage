@@ -12,4 +12,5 @@ fn main() {
 // cargo commands stay the same of Linux/macOS/Windows.
 
 // Building for release
-//
+// cargo build --release
+// release gives us the version of code which is being optimized.
