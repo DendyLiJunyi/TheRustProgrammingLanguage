@@ -3,6 +3,7 @@ prelude is set of items defined in the standard library that it brings into the 
 */
 
 // io library from the std library. It provides addtional features.
+use std::cmp::Ordering;
 use std::io;
 
 // Rng refers to the random number generator.
@@ -39,8 +40,23 @@ fn main() {
         .expect("Failed to read line");
     //{} placeholder
     //{} empty placeholder will use a comma-separated list of expressions to print.
+
+    // From String => Number.
+    // Shadowing the previous guess.
+    // trim() will eliminate any whitespace at the beginning and end.
+    // expect() calls when parse() fail.
+    let guess: u32 = guess.trim().parse().expect("Please type a number!");
     println!("You guessed: {guess}");
 
+    // match expression is made up of arms.
+    /*
+        guess.cmp(&secret_number) => Ordering::SomeType
+    */
+    // Rust can't compare a string and a number.
+    match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too small"),
+        Ordering::Greater => println!("Too big!"),
+        Ordering::Equal => println!("You win!"),
+    }
     // Semantic Versioning - Really interesting!
-    //
 }
